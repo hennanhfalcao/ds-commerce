@@ -89,10 +89,6 @@ public class User {
         return orders;
     }
 
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
