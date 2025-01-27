@@ -1,7 +1,9 @@
 package com.devsuperior.dscommerce.entities;
 
 
+import com.devsuperior.dscommerce.dto.ProductDTO;
 import jakarta.persistence.*;
+import org.springframework.beans.BeanUtils;
 
 import java.util.HashSet;
 import java.util.List;
@@ -46,6 +48,10 @@ public class Product {
         this.categories = categories;
     }
 
+    public Product(ProductDTO dto) {
+        BeanUtils.copyProperties(dto, this);
+    }
+
     public Long getId() {
         return id;
     }
@@ -83,7 +89,7 @@ public class Product {
     }
 
     public void setImgUrl(String imgUrl) {
-        imgUrl = imgUrl;
+        this.imgUrl = imgUrl;
     }
 
     public Set<Category> getCategories() {
