@@ -4,8 +4,6 @@ package com.devsuperior.dscommerce.dto;
 import com.devsuperior.dscommerce.entities.Product;
 import org.springframework.beans.BeanUtils;
 
-import java.util.HashSet;
-import java.util.Set;
 
 public class ProductDTO {
 
